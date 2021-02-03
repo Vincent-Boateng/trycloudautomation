@@ -44,6 +44,6 @@ Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
         Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected title. Test FAILED!");
 
 
-        WebDriverFactory.closeDriver();
+        WebDriverFactory.getDriver().close();
     }
 }
