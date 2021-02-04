@@ -13,7 +13,7 @@ public class US3TC8_DeleteFile_Folder  extends TestBase {
 
     WebElement action_icon = WebDriverFactory.getDriver().findElement(By.xpath(""));
 
-
+action_icon.click();
 
 }
 
