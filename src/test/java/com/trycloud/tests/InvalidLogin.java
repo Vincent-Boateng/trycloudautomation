@@ -16,7 +16,7 @@ public class InvalidLogin {
     @Test
     public void invalid_loginCredentials_test(){
 
-     WebDriverFactory.getDriver().get("http://qa2.trycloud.net/");
+     WebDriverFactory.getDriver().get(ConfigurationReader.getProperty("tryCloudUrl"));
         WebDriverFactory.getDriver().manage().window().maximize();
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Faker faker = new Faker();

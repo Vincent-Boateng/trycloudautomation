@@ -18,7 +18,7 @@ public abstract class TestBase {
     @BeforeMethod
     public void setUpMethod(){
         // 1.Open browser
-        WebDriverFactory.getDriver().get("http://qa2.trycloud.net");
+        WebDriverFactory.getDriver().get(ConfigurationReader.getProperty("tryCloudUrl"));
 
         WebElement usernameInputBox = WebDriverFactory.getDriver().findElement(By.id("user"));
         usernameInputBox.sendKeys(ConfigurationReader.getProperty("username1"));
