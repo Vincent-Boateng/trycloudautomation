@@ -38,7 +38,7 @@ public class InvalidLogin {
 Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
 
     String actualTitle = WebDriverFactory.getDriver().getTitle();
-    String expectedTitle = "Trycloud QA";
+    String expectedTitle = "Trycloud";
 
         BrowserUtils.sleep(10);
         Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected title. Test FAILED!");
