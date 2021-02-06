@@ -4,9 +4,11 @@
     <inspection_tool class="groupsTestNG" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="groups">
         <value>
-          <list size="2">
+          <list size="4">
             <item index="0" class="java.lang.String" itemvalue="UserStory1TC2" />
             <item index="1" class="java.lang.String" itemvalue="UserStory1" />
+            <item index="2" class="java.lang.String" itemvalue="regression" />
+            <item index="3" class="java.lang.String" itemvalue="UserStory3" />
           </list>
         </value>
       </option>
