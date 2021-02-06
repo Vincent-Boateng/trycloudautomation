@@ -10,10 +10,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-
+@Test(priority = 1, groups = "UserStory1")
 public class InvalidLogin {
 
-    @Test
+    @Test(priority = 1, groups = {"regression, smoke"})
     public void invalid_loginCredentials_test() {
 
         WebDriverFactory.getDriver().get("http://qa2.trycloud.net/");
