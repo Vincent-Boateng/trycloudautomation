@@ -15,13 +15,13 @@ public class US3TC9_ChangeAppSettings extends TestBase {
 
        public static void click_Setting_bottom_test() {
 
-              WebElement click_Setting = WebDriverFactory.getDriver().findElement(By.xpath("//button[normalize-space()='Settings']"));
+              WebElement click_U = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class='avatardiv avatardiv-shown']//img"));
 
-              click_Setting.click();
+              click_U.click();
 
-              WebElement click_Favorite= WebDriverFactory.getDriver().findElement(By.xpath("//a[normalize-space()='Favorites']"));
+              WebElement click_Activity= WebDriverFactory.getDriver().findElement(By.xpath("//a[normalize-space()='Settings']"));
 
-              click_Favorite.click();
+              click_Activity.click();
 
 
        }
