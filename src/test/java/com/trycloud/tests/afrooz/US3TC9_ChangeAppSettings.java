@@ -1,9 +1,11 @@
 package com.trycloud.tests.afrooz;
 
 import com.trycloud.tests.base.TestBase;
+import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class US3TC9_ChangeAppSettings extends TestBase {
@@ -25,24 +27,33 @@ public class US3TC9_ChangeAppSettings extends TestBase {
 
               Thread.sleep(2000);
 
-              WebElement click_Sharing= WebDriverFactory.getDriver().findElement(By.xpath("//span[normalize-space()='Sharing']"));
 
-              click_Sharing.click();
+              WebElement button1 = WebDriverFactory.getDriver().findElement(By.xpath("//label[normalize-space()='Show rich workspaces']"));
+              button1.click();
 
               Thread.sleep(2000);
 
-              WebElement checkbox3 = WebDriverFactory.getDriver().findElement(By.xpath("//label[normalize-space()='Show hidden files']"));
+              WebElement button2 = WebDriverFactory.getDriver().findElement(By.xpath("//label[normalize-space()='Show recommendations']"));
+              button2.click();
 
-              checkbox3.click();
-
-              if (!checkbox3.isSelected() && !checkbox3.isDisplayed()){
-                     System.out.println("Checkbox is not selected. Message is not displayed. Verification PASS!");
-              }else{
-                     System.out.println("FAIL!");
-              }
+              Thread.sleep(2000);
 
 
-              Thread.sleep(3000);
+              WebElement button3 = WebDriverFactory.getDriver().findElement(By.xpath("//label[normalize-space()='Show hidden files']"));
+              button3.click();
+
+
+              Thread.sleep(2000);
+
+              Assert.assertTrue(button1.isEnabled(), "The button1 is clickable");
+
+              Assert.assertTrue(button2.isEnabled(), "The button2 is clickable");
+
+
+
+
+
+
 
 
        }
