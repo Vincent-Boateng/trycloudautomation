@@ -15,3 +15,8 @@ public class US5TC1_Verify_Contacts_module extends TestBase {
 
 }
 }
+/*
+1. Login as a user
+2. Click “Contacts” module
+3. Verify the page tile is Contents module’s tile
+ */
