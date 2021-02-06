@@ -30,7 +30,7 @@ public class US3TC10_AppStorageUser extends TestBase {
 
         UploadFile.click();
 
-        WebElement UsageIncrease= WebDriverFactory.getDriver().findElement(By.xpath("//label[normalize-space()='Show hidden files']"));
+        WebElement UsageIncrease= WebDriverFactory.getDriver().findElement(By.xpath("//p[normalize-space()='3.5 MB used']"));
 
 
 
