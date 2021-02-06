@@ -19,12 +19,12 @@ public class US3TC8b_ClickActionIcon_Add_Comment extends TestBase {
         fileTabElement.click();
 
         WebElement file_action_icon = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"fileList\"]/tr[3]/td[2]/a/span[2]/a[2]/span[1]"));
-        //file_action_icon.click(); //*[@id="fileList"]/tr[3]/td[2]/a/span[2]/a[2]/span[1]
-        JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
-        executor.executeScript("arguments[0].click();", file_action_icon);
+        file_action_icon.click();
+        //JavascriptExecutor executor = (JavascriptExecutor) WebDriverFactory.getDriver();
+       // executor.executeScript("arguments[0].click();", file_action_icon);
 
         WebElement detailsElement = WebDriverFactory.getDriver().findElement(By.cssSelector("#fileList > tr.mouseOver > td.filename.ui-draggable.ui-draggable-handle > div > ul > li.action-details-container > a > span:nth-child(2)"));
-// //*[@id="rightClickMenu"]/ul/li[2]/a/span[2]
+
         detailsElement.click();
 
         BrowserUtils.sleep(10);
