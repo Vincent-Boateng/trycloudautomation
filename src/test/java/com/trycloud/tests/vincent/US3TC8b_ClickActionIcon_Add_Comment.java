@@ -27,20 +27,20 @@ public class US3TC8b_ClickActionIcon_Add_Comment extends TestBase {
 
         detailsElement.click();
 
-        BrowserUtils.sleep(10);
+        BrowserUtils.sleep(5);
 
         WebElement commentsTab = WebDriverFactory.getDriver().findElement(By.xpath("//a[normalize-space()='Comments']"));
         commentsTab.click();
 
-        BrowserUtils.sleep(10);
+        BrowserUtils.sleep(5);
 
         WebElement commentBox = WebDriverFactory.getDriver().findElement(By.xpath("//div[@data-placeholder='New comment …']"));
-        BrowserUtils.sleep(10);
+        BrowserUtils.sleep(5);
         commentBox.sendKeys("This is is a very useful file. Thank you for uploading it");
 
         WebElement sendCommentAction = WebDriverFactory.getDriver().findElement(By.xpath("//input[@class='submit icon-confirm has-tooltip']"));
 
-        BrowserUtils.sleep(10);
+        BrowserUtils.sleep(5);
         sendCommentAction.click();
 
         WebElement activityComment = WebDriverFactory.getDriver().findElement(By.xpath("//div[normalize-space()='This is is a very useful file. Thank you for uploading it']"));
