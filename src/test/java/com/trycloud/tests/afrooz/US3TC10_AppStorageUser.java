@@ -1,6 +1,7 @@
 package com.trycloud.tests.afrooz;
 
 import com.trycloud.tests.base.TestBase;
+import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,21 +17,22 @@ public class US3TC10_AppStorageUser extends TestBase {
 
         click_Files.click();
 
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
 
-        WebElement PlusButton= WebDriverFactory.getDriver().findElement(By.xpath("//span[@class='icon icon-add']"));
 
-        PlusButton.click();
-
-        Thread.sleep(2000);
+        WebElement uploadButton= WebDriverFactory.getDriver().findElement(By.xpath("//span[@class='icon icon-add']"));
+        uploadButton.click();
 
 
-        WebElement UploadFile= WebDriverFactory.getDriver().findElement(By.className("displayname"));
+        WebElement currentUsage = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"quota\"]/a/p\n" + "\n"));
 
-        UploadFile.click();
 
-        WebElement UsageIncrease= WebDriverFactory.getDriver().findElement(By.xpath("//p[normalize-space()='3.5 MB used']"));
+        WebElement nextUsage = WebDriverFactory.getDriver().findElement(By.xpath("//p[normalize-space()='3.7 MB used']"));
+
+
+        BrowserUtils.sleep(2);
+
 
 
 
