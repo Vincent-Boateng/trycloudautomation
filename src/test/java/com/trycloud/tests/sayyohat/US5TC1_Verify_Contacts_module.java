@@ -1,5 +1,6 @@
 package com.trycloud.tests.sayyohat;
 
+import com.github.javafaker.Faker;
 import com.google.common.base.Verify;
 import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
@@ -14,6 +15,7 @@ import sun.management.snmp.jvmmib.JVM_MANAGEMENT_MIBOidTable;
 
 public class US5TC1_Verify_Contacts_module extends TestBase {
 //5. Story: As a user, I should be able to access to Contacts module.
+    Faker faker = new Faker();
     private static Chart driver;
 
     @Test
@@ -47,6 +49,19 @@ public class US5TC1_Verify_Contacts_module extends TestBase {
             WebElement newContactButton = WebDriverFactory.getDriver().findElement(By.id("new-contact-button"));
             newContactButton.click();
             BrowserUtils.sleep(2);
+
+            //4.Fill out the contact info like : Title, Phone, email, address , etc
+            //Contact name
+            WebElement name = WebDriverFactory.getDriver().findElement(By.id("contact-fullname"));
+            name.click();
+            name.sendKeys(faker.name().fullName());
+            BrowserUtils.sleep(3);
+
+            //Company name
+            WebElement company = WebDriverFactory.getDriver().findElement(By.id("contact-org"));
+            company.click();
+            company.sendKeys(faker.company().industry());
+            BrowserUtils.sleep(3);
 
         }
 
