@@ -13,7 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import sun.management.snmp.jvmmib.JVM_MANAGEMENT_MIBOidTable;
 
-public class US5TC1_Verify_Contacts_module extends TestBase {
+public class US5TC1TC2_Verify_Contacts_Add_Contacts extends TestBase {
 //5. Story: As a user, I should be able to access to Contacts module.
     Faker faker = new Faker();
     private static Chart driver;
