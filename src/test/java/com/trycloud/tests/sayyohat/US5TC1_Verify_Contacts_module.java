@@ -63,7 +63,84 @@ public class US5TC1_Verify_Contacts_module extends TestBase {
             company.sendKeys(faker.company().industry());
             BrowserUtils.sleep(3);
 
+            //title
+            WebElement title = WebDriverFactory.getDriver().findElement(By.id("contact-title"));
+            title.click();
+            title.sendKeys(faker.company().industry());
+            BrowserUtils.sleep(3);
+
+            //phone
+            WebElement phone = WebDriverFactory.getDriver().findElement(By.xpath("//input[@inputmode ='tel']"));
+            phone.click();
+            phone.sendKeys(faker.phoneNumber().cellPhone());
+            BrowserUtils.sleep(3);
+/*
+
+//email
+            WebElement Email = WebDriverFactory.getDriver().findElement(By.xpath("//input[@inputmode ='email']"));
+            Email.click();
+            Email.sendKeys(faker.);
+ */
+            //PostOfficeBox
+          WebElement postofficebox = WebDriverFactory.getDriver().findElement(By.xpath("//input[@class='property__value']"));
+          postofficebox.click();
+          postofficebox.sendKeys(faker.address().buildingNumber());
+          BrowserUtils.sleep(2);
+
+
+            //address
+            WebElement address =WebDriverFactory.getDriver().findElement(By.xpath("//div[contains(text(),'Address')]/following-sibling::input"));
+            address.click();
+            address.sendKeys(faker.address().streetAddressNumber()+" "+faker.address().streetName());
+            BrowserUtils.sleep(2);
+            //Extended address
+            WebElement extendedAddress = WebDriverFactory.getDriver().findElement(By.xpath(("//div[contains(text(),'Extended address')]/following-sibling::input")));
+            extendedAddress.click();
+            extendedAddress.sendKeys(faker.address().streetAddressNumber()+" "+faker.address().streetName());
+            BrowserUtils.sleep(2);
+
+            //postal code
+            WebElement postalCode = WebDriverFactory.getDriver().findElement(By.xpath(("//div[contains(text(),'Postal code')]/following-sibling::input")));
+            postalCode.click();
+            postalCode.sendKeys(faker.address().zipCode());
+            BrowserUtils.sleep(2);
+
+            //City
+            WebElement city = WebDriverFactory.getDriver().findElement(By.xpath(("//div[contains(text(),'City')]/following-sibling::input")));
+            city.click();
+            city.sendKeys(faker.address().city());
+            BrowserUtils.sleep(2);
+
+            //State
+            WebElement state = WebDriverFactory.getDriver().findElement(By.xpath(("//div[contains(text(),'State')]/following-sibling::input")));
+            state.click();
+            state.sendKeys(faker.address().state());
+            BrowserUtils.sleep(2);
+
+            //Country
+            WebElement country = WebDriverFactory.getDriver().findElement(By.xpath(("//div[contains(text(),'Country')]/following-sibling::input")));
+            country.click();
+            country.sendKeys(faker.address().country());
+            BrowserUtils.sleep(8);
+
+            //3.Click “New Contact” button
+            WebElement newContactButton1 = WebDriverFactory.getDriver().findElement(By.id("new-contact-button"));
+            newContactButton1.click();
+            BrowserUtils.sleep(5);
+
+
+            //5.Verify the contact name is added to the contact list
+            WebElement contact = WebDriverFactory.getDriver().findElement(By.xpath("//div[@class='app-content-list-item-line-one']"));
+            Assert.assertTrue(contact.isDisplayed());
+
+
+
         }
 
+
+
+
 }
+
+
 
