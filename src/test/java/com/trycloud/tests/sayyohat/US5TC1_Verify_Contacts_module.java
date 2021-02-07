@@ -1,5 +1,6 @@
 package com.trycloud.tests.sayyohat;
 
+import com.google.common.base.Verify;
 import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
@@ -12,17 +13,16 @@ public class US5TC1_Verify_Contacts_module extends TestBase {
 
 @Test
     public static void click_ContactsModule_FromFile_test() throws InterruptedException {
-
-    WebElement contacts_module = WebDriverFactory.getDriver().findElement(By.linkText("Contacts"));
-    BrowserUtils.sleep(3);
-    contacts_module.click();
-    BrowserUtils.sleep(3);
-
-
-}
-}
 /*
 1. Login as a user
 2. Click “Contacts” module
-3. Verify the page tile is Contents module’s tile
+
  */
+    WebElement contactsModule = WebDriverFactory.getDriver().findElement(By.xpath("//a[@href='/index.php/apps/contacts/']"));
+    BrowserUtils.sleep(3);
+    contactsModule.click();
+    BrowserUtils.sleep(3);
+
+  //  3. Verify the page tile is Contents module’s title
+}
+}
