@@ -5,7 +5,7 @@
       <option name="groups">
         <value>
           <list size="2">
-            <item index="0" class="java.lang.String" itemvalue="UserStory3" />
+            <item index="0" class="java.lang.String" itemvalue="userStory3" />
             <item index="1" class="java.lang.String" itemvalue="regression" />
           </list>
         </value>

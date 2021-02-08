@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-@Test(groups = "UserStory3")
+@Test(groups = "userStory3")
 public class US3TC8b_ClickActionIcon_Add_Comment extends TestBase {
 
     @Test(groups = "regression")
