@@ -40,8 +40,12 @@ public class US3TC8a_Delete_File_Folder extends TestBase {
         BrowserUtils.sleep(5);
         deleteAction.click();
         BrowserUtils.sleep(5);
-        WebElement deletedFile = WebDriverFactory.getDriver().findElement(By.xpath("//span[normalize-space()='Group Work']"));
+        WebElement deletedFiles_folder = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"app-navigation\"]/ul/li[7]/a"));
+        deletedFiles_folder.click();
+        WebElement deletedFile = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"fileList\"]/tr[14]/td[2]/a/div/div"));
+        //WebElement deletedFile = WebDriverFactory.getDriver().findElement(By.xpath("//span[normalize-space()='Group Work']"));
         BrowserUtils.sleep(5);
+        //Assert.assertTrue(deletedFile.isDisplayed());
         Assert.assertTrue(deletedFile.isDisplayed());
 
 
