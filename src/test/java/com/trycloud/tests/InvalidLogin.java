@@ -10,13 +10,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-@Test(priority = 1, groups = "UserStory1")
+
 public class InvalidLogin {
 
-    @Test(priority = 1, groups = {"regression, smoke"})
-    public void invalid_loginCredentials_test() {
+    @Test
+    public void invalid_loginCredentials_test(){
 
-        WebDriverFactory.getDriver().get("http://qa2.trycloud.net/");
+        WebDriverFactory.getDriver().get(ConfigurationReader.getProperty("tryCloudUrl"));
         WebDriverFactory.getDriver().manage().window().maximize();
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Faker faker = new Faker();
@@ -38,10 +38,11 @@ public class InvalidLogin {
         Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
 
         String actualTitle = WebDriverFactory.getDriver().getTitle();
-        String expectedTitle = "Trycloud";
+        String expectedTitle = "Trycloud QA";
 
         BrowserUtils.sleep(10);
         Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected title. Test FAILED!");
+
 
         WebDriverFactory.getDriver().close();
     }
