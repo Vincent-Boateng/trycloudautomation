@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class _AppStorageUser extends TestBase {
+public class US3TC10_AppStorageUser extends TestBase {
 
     @Test
 
