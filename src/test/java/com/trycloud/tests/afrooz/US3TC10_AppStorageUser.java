@@ -1,5 +1,6 @@
 package com.trycloud.tests.afrooz;
 
+
 import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.WebDriverFactory;
@@ -8,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import com.trycloud.tests.base.TestBase;
 
 public class US3TC10_AppStorageUser extends TestBase {
 
@@ -52,7 +54,7 @@ public class US3TC10_AppStorageUser extends TestBase {
 
         String path = "/Users/mehdi/Desktop";
         WebElement uploadButton= WebDriverFactory.getDriver().findElement(By.xpath("//span[normalize-space()='Upload file']"));
-        uploadButton.sendKeys(path+Keys.ENTER);
+        uploadButton.sendKeys(path+ Keys.ENTER);
 
         WebDriverFactory.getDriver().navigate().refresh();
         WebElement usageAfterUpload = WebDriverFactory.getDriver().findElement(By.xpath("//p[normalize-space()='1 MB used']"));
@@ -65,6 +67,3 @@ public class US3TC10_AppStorageUser extends TestBase {
 
     }
 }
-
-
-
