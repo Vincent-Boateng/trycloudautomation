@@ -13,6 +13,7 @@ public class US6TC2_Verify_Sending_NotesInThePage extends TestBase {
        Test case #2 - verify users can send notes in the page. (There is no note icon in the page)
              1. Login as a user: The first step(longin as a user) is going go be done automatically
                 from TestBase Class created by Vincent
+                kdfkdjf
            */
 
   @Test
