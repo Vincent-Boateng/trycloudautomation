@@ -18,7 +18,7 @@ public class US7TC1_Verify_Search_Files extends TestBase {
 
         WebElement insidesearch= WebDriverFactory.getDriver().findElement(By.xpath("//input[@placeholder='Search apps, files, comments, deck, messages, contacts, conversations, events, tasks, settings, messages …']"));
         BrowserUtils.sleep(2);
-
+        //write something in search
         insidesearch.sendKeys("yoda1.png", Keys.ENTER);
 
         String expectedResult = "yoda1.png";
