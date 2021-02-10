@@ -15,7 +15,7 @@ public class US2TC1_VerifyAccessMainModules extends TestBase {
 
 
 
-        //Dashboard
+        //Dashboard icon
         WebElement dashboard = WebDriverFactory.getDriver().findElement(By.xpath("//ul[@id='appmenu']//a[@aria-label='Dashboard']//*[local-name()='svg']//*[name()='image' and contains(@class,'app-icon')]"));
         dashboard.click();
         BrowserUtils.sleep(2);
