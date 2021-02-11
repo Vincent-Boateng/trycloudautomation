@@ -23,7 +23,7 @@ public class US3TC4_RemoveFileFavorites extends TestBase{
             WebElement removeFromFavoritesTab = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"fileList\"]/tr[2]/td[1]/div/ul/li[3]/a/span[2]"));
             removeFromFavoritesTab.click();
             WebElement babyYoda = WebDriverFactory.getDriver().findElement(By.xpath("//*[@id=\"fileList\"]/tr[2]/td[1]/a/span[1]/span[1]"));
-            Assert.assertFalse(babyYoda.isDisplayed());
+            Assert.assertTrue(babyYoda.isDisplayed());
 
 
         //3. Story: As a user, I should be able to able to access to Files module.
